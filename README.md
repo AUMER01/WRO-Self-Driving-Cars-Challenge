@@ -133,7 +133,9 @@ https://www.youtube.com/shorts/YcODsZENiaM
 
 ## 📸 photos/
 
-Includes high-resolution images of the robot (all sides), system components, and the team.
+Images of the robot (all sides)
+<div align="center">
+
 <table>
   <tr>
     <td><img width="200" src="https://github.com/user-attachments/assets/370c67ba-887e-4f19-9b49-af6233d8e356" /></td>
@@ -147,7 +149,9 @@ Includes high-resolution images of the robot (all sides), system components, and
   </tr>
 </table>
 
+</div>
 
+system components
 
 
 
