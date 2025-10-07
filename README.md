@@ -76,7 +76,9 @@ void loop() {
     Serial.print(" | Servo: "); Serial.println(servoAngle);
   }
 
-  delay(50);  
+  delay(50);
+}
+
 vision/ – image processing and traffic sign recognition
 
 utils/ – helper functions shared between modules
