@@ -78,7 +78,7 @@ void loop() {
 
   delay(50);
 }
-
+```
 vision/ – image processing and traffic sign recognition
 
 utils/ – helper functions shared between modules
