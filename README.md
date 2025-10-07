@@ -1,12 +1,43 @@
-## Content
+AUM-Future-Engineers-2025/
+│
+├── README.md
+├── LICENSE
+│
+├── docs/
+│   ├── Vehicle_Design_Report.pdf          ← Detailed printed documentation
+│   ├── System_Architecture.png            ← Overall system block diagram
+│   ├── Sensor_Placement_Diagram.png       ← Position layout of sensors
+│   └── commit_log_summary.txt             ← Development and commit timeline
+│
+├── code/
+│   ├── main_controller/
+│   │   ├── main.py / main.cpp             ← Main program controlling movement and logic
+│   │   ├── motor_control.py               ← DC motor and steering control
+│   │   ├── navigation.py                  ← Track-following and lap logic
+│   │   └── sensors.py                     ← Ultrasonic and other sensor interfaces
+│   ├── vision/
+│   │   ├── line_tracking.py               ← Line or lane-following camera processing
+│   │   └── object_detection.py            ← Red/green traffic sign detection
+│   └── utils/
+│       └── helper_functions.py            ← Shared utility functions
+│
+├── models/
+│   ├── chassis_3d_model.stl               ← 3D printable chassis model
+│   ├── sensor_mount.stl                   ← Mount model for ultrasonic sensors
+│   └── wheel_cad_model.stl                ← Wheel CAD model
+│
+├── videos/
+│   └── demo_link.txt                      ← YouTube demo link (public/unlisted)
+│
+└── photos/
+    ├── top_view.jpg
+    ├── bottom_view.jpg
+    ├── left_side.jpg
+    ├── right_side.jpg
+    ├── front_view.jpg
+    ├── rear_view.jpg
+    └── team_photo.jpg
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
-* `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
-* `video` contains the video.md file with the link to a video where driving demonstration exists
-* `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `src` contains code of control software for all components which were programmed to participate in the competition
-* `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
-* `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
 
 <p align="center">
   <img width="512" height="512" alt="AUMers Logo" src="https://github.com/user-attachments/assets/88de7538-2cd9-4d02-96d0-4ed30c3b0e1c" />
