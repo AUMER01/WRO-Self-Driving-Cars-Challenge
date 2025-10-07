@@ -151,7 +151,11 @@ Images of the robot (all sides)
 
 </div>
 
-system components
+Robot's components
+<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/b178bf55-6c87-4521-a2f3-9c944bf2b491" />
+
+Tools Used in the Lab
+<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/b750eb5a-1c5d-4c75-9160-fdc2dd91ea35" />
 
 
 
