@@ -1,7 +1,10 @@
 Engineering materials
 ====
 
-This repository contains engineering materials of **AUMer01** self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2025.
+This repository contains engineering materials of **AUMers** self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2025.
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/f051f0e4-e086-4fe0-86a9-88b353c8dc6b" />
+
+
 
 ## Content
 
