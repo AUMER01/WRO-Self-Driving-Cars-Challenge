@@ -134,12 +134,19 @@ https://www.youtube.com/shorts/YcODsZENiaM
 ## 📸 photos/
 
 Includes high-resolution images of the robot (all sides), system components, and the team.
-<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/370c67ba-887e-4f19-9b49-af6233d8e356" />
-<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/9de4440c-2568-4540-a5c2-69495093c9ee" />
-<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/cf5b756a-f996-47a3-838f-0b76ed1a9f25" />
-<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/a3a793fc-9b64-4f06-9266-ef11fa7deebe" />
-<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/3c058c81-6d25-4169-a338-65a1c3444224" />
-<p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/55c5cd97-d009-4695-becd-e91ec7da2367" />
+<table>
+  <tr>
+    <td><img width="200" src="https://github.com/user-attachments/assets/370c67ba-887e-4f19-9b49-af6233d8e356" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/9de4440c-2568-4540-a5c2-69495093c9ee" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/cf5b756a-f996-47a3-838f-0b76ed1a9f25" /></td>
+  </tr>
+  <tr>
+    <td><img width="200" src="https://github.com/user-attachments/assets/a3a793fc-9b64-4f06-9266-ef11fa7deebe" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/3c058c81-6d25-4169-a338-65a1c3444224" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/55c5cd97-d009-4695-becd-e91ec7da2367" /></td>
+  </tr>
+</table>
+
 
 
 
