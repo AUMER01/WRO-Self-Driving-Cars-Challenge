@@ -52,10 +52,31 @@ Contains all reference documents and diagrams related to system design, sensor p
 
 ## ⚙️ code/
 
-Includes all software used to control and operate the robot:
+Includes code fucntions used to control and operate the robot:
 
 main_controller/ – core driving and logic code
+```cpp
+void loop() {
+  float leftDist = getDistance(TRIG_LEFT, ECHO_LEFT);   
+  float rightDist = getDistance(TRIG_RIGHT, ECHO_RIGHT);
+  if (leftDist < 0) leftDist = rightDist;               
+  if (rightDist < 0) rightDist = leftDist;
+  float error = leftDist - rightDist;                 
+  float derivative = error - lastError;               
+  float pdOutput = KP * error + KD * derivative;      
+  int servoAngle = constrain(CENTER_ANGLE + pdOutput, 
+                             MIN_SERVO_ANGLE,
+                             MAX_SERVO_ANGLE);
+  steeringServo.write(servoAngle);                    
+  lastError = error;                                  
+  runMotor(MOTOR_SPEED, false);
+  if (DEBUG_OUTPUT) {
+    Serial.print("L:"); Serial.print(leftDist);
+    Serial.print(" R:"); Serial.print(rightDist);
+    Serial.print(" | Servo: "); Serial.println(servoAngle);
+  }
 
+  delay(50);  
 vision/ – image processing and traffic sign recognition
 
 utils/ – helper functions shared between modules
