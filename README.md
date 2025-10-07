@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [🧩 Project Overview](#-project-overview)
-- [Repository Structure](#repository-structure)
+- [Repository Structure](#-repository-structure)
   - [📁 docs/](#-docs)
   - [⚙️ code/](#-code)
   - [main_controller/](#main_controller)
