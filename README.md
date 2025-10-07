@@ -1,42 +1,5 @@
 AUM-Future-Engineers-2025/
-│
-├── README.md
-├── LICENSE
-│
-├── docs/
-│   ├── Vehicle_Design_Report.pdf          ← Detailed printed documentation
-│   ├── System_Architecture.png            ← Overall system block diagram
-│   ├── Sensor_Placement_Diagram.png       ← Position layout of sensors
-│   └── commit_log_summary.txt             ← Development and commit timeline
-│
-├── code/
-│   ├── main_controller/
-│   │   ├── main.py / main.cpp             ← Main program controlling movement and logic
-│   │   ├── motor_control.py               ← DC motor and steering control
-│   │   ├── navigation.py                  ← Track-following and lap logic
-│   │   └── sensors.py                     ← Ultrasonic and other sensor interfaces
-│   ├── vision/
-│   │   ├── line_tracking.py               ← Line or lane-following camera processing
-│   │   └── object_detection.py            ← Red/green traffic sign detection
-│   └── utils/
-│       └── helper_functions.py            ← Shared utility functions
-│
-├── models/
-│   ├── chassis_3d_model.stl               ← 3D printable chassis model
-│   ├── sensor_mount.stl                   ← Mount model for ultrasonic sensors
-│   └── wheel_cad_model.stl                ← Wheel CAD model
-│
-├── videos/
-│   └── demo_link.txt                      ← YouTube demo link (public/unlisted)
-│
-└── photos/
-    ├── top_view.jpg
-    ├── bottom_view.jpg
-    ├── left_side.jpg
-    ├── right_side.jpg
-    ├── front_view.jpg
-    ├── rear_view.jpg
-    └── team_photo.jpg
+
 
 
 <p align="center">
