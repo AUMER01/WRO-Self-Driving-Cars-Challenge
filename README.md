@@ -139,10 +139,13 @@ Parking maneuver:	Successfully performed parallel parking within boundaries
 
 
 ## 👨‍🔧 Team Members
-Name	Role	Responsibility
-[Mohammad Sharsheer]	Team Leader	System integration, navigation logic
-[Noor]	Chassis design and assembly. Documentation and GitHub maintenance
-[Farah]	Vision system and code optimization
+
+| Name               | Role                | Responsibility                               |
+|-------------------|-------------------|---------------------------------------------|
+| Mohammad Sharsheer | Team Leader        | System integration, navigation logic        |
+| Noor Alkhayat               | Chassis Designer   | Chassis design and assembly, documentation, GitHub maintenance |
+| Farah AlHayek              | Vision Engineer    | Vision system development and code optimization |
+
 
 
 ##📄 License
