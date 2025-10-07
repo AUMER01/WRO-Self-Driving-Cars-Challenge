@@ -122,7 +122,7 @@ Tune motor speed and steering PID parameters for smooth cornering
 Validate the final three-lap and parking performance
 
 
-##📈 Results and Performance
+## 📈 Results and Performance
 Test	Outcome
 Track navigation (3 laps)	Completed successfully in consistent times
 Traffic sign recognition	>95% accuracy in various lighting conditions
@@ -130,14 +130,14 @@ Obstacle avoidance	Smooth navigation with no collisions
 Parking maneuver	Successfully performed parallel parking within boundaries
 
 
-##🎬 Video Demonstration
+## 🎬 Video Demonstration
 
 🎥 Watch the YouTube Demo
 
 (Ensure the video is set to “public” or “unlisted” so judges can access it)
 
 
-##👨‍🔧 Team Members
+## 👨‍🔧 Team Members
 Name	Role	Responsibility
 [Your Name]	Team Leader	System integration, navigation logic
 [Member 2]	Hardware Engineer	Chassis design, wiring, and assembly
