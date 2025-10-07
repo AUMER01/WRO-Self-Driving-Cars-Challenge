@@ -209,25 +209,28 @@ Validate the final three-lap and parking performance
 
 ## 📈 Results and Performance
 Test	Outcome
-Track navigation (3 laps):	Completed successfully in consistent times
-Traffic sign recognition:	>95% accuracy in various lighting conditions
-Obstacle avoidance:	Smooth navigation with no collisions
-Parking maneuver:	Successfully performed parallel parking within boundaries
+| Task                     | Performance                                      |
+|--------------------------|-------------------------------------------------|
+| Track navigation (3 laps) | Completed successfully in consistent times     |
+| Traffic sign recognition  | >95% accuracy in various lighting conditions   |
+| Obstacle avoidance        | Smooth navigation with no collisions           |
+| Parking maneuver          | Successfully performed parallel parking within boundaries |
+
 
 
 ## 🎬 Video Demonstration
 
 🎥 Watch the YouTube Demo
 
-
+https://www.youtube.com/shorts/YcODsZENiaM
 
 ## 👨‍🔧 Team Members
 
 | Name               | Role                | Responsibility                               |
 |-------------------|-------------------|---------------------------------------------|
-| Mohammad Sharsheer | Team Leader        | System integration, navigation logic        |
-| Noor Alkhayat               | Chassis Designer   | Chassis design and assembly, documentation, GitHub maintenance |
-| Farah AlHayek              | Vision Engineer    | Vision system development and code optimization |
+| Mohammad Sharsheer | Coach        | System integration, navigation logic        |
+| Noor Alkhayat               | Chassis designer   | Chassis design and assembly, documentation, GitHub maintenance |
+| Farah AlHayek              | Vision Detection programmer  | Vision system development and code optimization |
 
 
 
