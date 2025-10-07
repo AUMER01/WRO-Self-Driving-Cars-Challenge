@@ -20,7 +20,6 @@
 - [📈 Results and Performance](#-results-and-performance)
 - [🎬 Video Demonstration](#-video-demonstration)
 - [👨‍🔧 Team Members](#-team-members)
-- [📄 License](#-license)
 
 
 ## 🧩 Project Overview
@@ -237,6 +236,3 @@ https://www.youtube.com/shorts/YcODsZENiaM
 
 
 
-##📄 License
-
- file for details.
