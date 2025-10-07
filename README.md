@@ -9,7 +9,6 @@
   - [⚙️ code/](#-code)
   - [main_controller/](#main_controller)
   - [vision/](#vision)
-  - [utils/](#utils)
   - [🧱 models/](#-models)
   - [🎥 videos/](#-videos)
   - [📸 photos/](#-photos)
@@ -80,8 +79,44 @@ void loop() {
 }
 ```
 vision/ – image processing and traffic sign recognition
+```cpp
+int blocks = pixy.ccc.getBlocks();     
+  pixyActive = false;                   
+  int sig3TotalX = 0, sig3Count = 0;
+  for (int i = 0; i < blocks; i++) {
+    if (pixy.ccc.blocks[i].m_signature == 3) {   
+    
+      sig3Count++;
+    }
+  }
 
-utils/ – helper functions shared between modules
+  if (sig3Count > 0) {                    
+    if (avgX < 120) steeringServo.write(RED_HARD_LEFT);
+    else if (avgX > 200) steeringServo.write(GREEN_HARD_RIGHT);
+    else steeringServo.write(CENTER_ANGLE);
+
+    runMotor(SLOW_SPEED, false);          
+    if (DEBUG_OUTPUT) Serial.println("PARKING MODE ACTIVE");
+    return;                           
+  }
+
+  if (!parkingMode && blocks > 0) {
+    int sig = pixy.ccc.blocks[0].m_signature;  
+    int x   = pixy.ccc.blocks[0].m_x;         
+    if (sig == 1) {   // Red object detected
+      pixyActive = true;
+      if (x >= 200) steeringServo.write(RED_SOFT_LEFT);
+      else if (x >= 120) steeringServo.write(RED_MED_LEFT);
+      else steeringServo.write(RED_HARD_LEFT);
+    }
+    else if (sig == 2) {   
+      pixyActive = true;
+      if (x <= 120) steeringServo.write(GREEN_SOFT_RIGHT);
+      else if (x <= 200) steeringServo.write(GREEN_MED_RIGHT);
+      else steeringServo.write(GREEN_HARD_RIGHT);
+    }
+  }
+```
 
 
 ## 🧱 models/
