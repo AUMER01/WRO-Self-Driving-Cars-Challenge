@@ -128,8 +128,8 @@ int blocks = pixy.ccc.getBlocks();
 
 ## 🎥 videos/
 
-Contains a text file with a YouTube demo link showing the autonomous driving test.
-
+This is a YouTube link showing a demo for our autonomous driving test.
+https://www.youtube.com/shorts/YcODsZENiaM
 
 ## 📸 photos/
 
