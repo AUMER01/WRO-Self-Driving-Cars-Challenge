@@ -27,10 +27,23 @@
 
 ## 🧩 Project Overview
 
-AUMers is an autonomous vehicle developed by AUM University (Kuwait) for the World Robot Olympiad – Future Engineers 2025 competition.
-The vehicle is designed to navigate a track autonomously, complete three laps under randomized wall conditions, detect colored traffic signs (red and green pillars), and finish with an automatic parking maneuver.
+The AUMers project introduces an autonomous vehicle designed to complete three fully autonomous laps on a closed track featuring randomly traffic signs. The system integrates mechanical design, embedded control, and computer vision to achieve smooth navigation, adaptive decision-making, and intelligent obstacle management.
 
-This project demonstrates the integration of mobility control, sensor-based navigation, and computer vision using an Xmotion controller, ultrasonic sensors, and a PixyCam.
+AUMers is built around four core subsystems:
+
+Mobility System:
+A balanced chassis driven by a DC motor for propulsion and a servo motor for steering enables precise motion control. The system ensures stable navigation through curves and speed variations using real-time sensor feedback.
+
+Power System:
+A 7.4V Li-Po battery supplies stable power to both motors and control electronics. The Xmotion board manages efficient power distribution, minimizing electrical noise and ensuring consistent performance during acceleration and steering.
+
+Sensing System:
+Three ultrasonic sensors continuously measure distances to nearby walls and obstacles, maintaining the robot’s centered position. A PixyCam vision sensor detects red and green traffic markers, guiding directional decisions and sign-based behavior.
+
+Obstacle Management and Intelligent Behavior:
+Sensor fusion between ultrasonic data and PixyCam vision enables dynamic lane centering, traffic sign interpretation, and collision avoidance. After completing three laps, the vehicle autonomously locates and parks precisely within the designated zone.
+
+Overall, AUMers demonstrates a comprehensive approach to autonomous mobility, combining reliable sensing, efficient power control, and intelligent decision-making to operate safely and effectively in a variable environment.
 
 
 ## 📁 docs/
@@ -51,7 +64,7 @@ utils/ – helper functions shared between modules
 
 ## 🧱 models/
 
-3D printable and CAD files used for the robot’s mechanical structure.
+3D printed design files used for the robot’s mechanical structure.
 
 
 ## 🎥 videos/
@@ -66,33 +79,23 @@ Includes high-resolution images of the robot (all sides), system components, and
 
 ## 🔩 Hardware and Components
 Component	Description	Purpose
-Xmotion Controller	Integrated motor control + logic board	Core control and communication unit
-DC Motors	Dual drive motors	Provide motion and steering control
-Servo Motor	Steering actuator	Front wheel steering
-Ultrasonic Sensors (HC-SR04)	3 units (front, left, right)	Distance measurement and wall alignment
-PixyCam	Vision sensor	Detects traffic signs and parking cues
-7.4V Li-Po Battery	Power supply	Provides energy to the system
-3D Printed Chassis and Mounts	Custom design	Mechanical support and sensor positioning
+Xmotion Controlle:r	Integrated motor control + logic board	Core control and communication unit
+DC Motors:	Provide motion and steering control
+Servo Motor:	Steering actuator	Front wheel steering
+Ultrasonic Sensors (HC-SR04)	3 units (front, left, right):	Distance measurement and wall alignment
+PixyCam	Virsion 2.1:	Detects traffic signs and parking cues
+7.4V Li-Po Battery:	Power supply	Provides energy to the system
+3D Printed Chassis and Mounts:	Custom design	Mechanical support and sensor positioning
 
 
 ## 💻 Software Description
 
-The software is written in Python and runs on the Xmotion platform.
-The architecture is divided into independent modules for sensing, control, navigation, and vision.
-Key algorithms include:
-
-PID-based motor speed control
-
-Obstacle avoidance logic using ultrasonic data
-
-Vision-based color detection for lane side selection
-
-Parallel parking maneuver using combined vision and distance feedback
-
+The Xmotion board is programmed using the Arduino IDE, with code written in C/C++.
+The code architecture is divided into independent modules for sensing, control, navigation, and vision.
 
 ## 🚗 Mobility, Power, and Sensing System
 
-The robot’s mobility relies on two DC motors controlled through the Xmotion board, providing smooth and precise motion.
+The robot’s mobility relies on one DC motors controlled through the Xmotion board, providing smooth and precise motion(Forward or Backward).
 A 7.4V Li-Po battery powers all components efficiently.
 Three ultrasonic sensors maintain the robot’s centered position by comparing left and right distances, ensuring lane balance and wall avoidance.
 
@@ -124,28 +127,25 @@ Validate the final three-lap and parking performance
 
 ## 📈 Results and Performance
 Test	Outcome
-Track navigation (3 laps)	Completed successfully in consistent times
-Traffic sign recognition	>95% accuracy in various lighting conditions
-Obstacle avoidance	Smooth navigation with no collisions
-Parking maneuver	Successfully performed parallel parking within boundaries
+Track navigation (3 laps):	Completed successfully in consistent times
+Traffic sign recognition:	>95% accuracy in various lighting conditions
+Obstacle avoidance:	Smooth navigation with no collisions
+Parking maneuver:	Successfully performed parallel parking within boundaries
 
 
 ## 🎬 Video Demonstration
 
 🎥 Watch the YouTube Demo
 
-(Ensure the video is set to “public” or “unlisted” so judges can access it)
 
 
 ## 👨‍🔧 Team Members
 Name	Role	Responsibility
-[Your Name]	Team Leader	System integration, navigation logic
-[Member 2]	Hardware Engineer	Chassis design, wiring, and assembly
-[Member 3]	Software Engineer	Vision system and code optimization
-[Member 4]	Documentation Lead	Report writing and GitHub maintenance
+[Mohammad Sharsheer]	Team Leader	System integration, navigation logic
+[Noor]	Chassis design and assembly. Documentation and GitHub maintenance
+[Farah]	Vision system and code optimization
 
 
 ##📄 License
 
-This project is licensed under the MIT License — see the LICENSE
  file for details.
