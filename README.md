@@ -1,6 +1,5 @@
 #🤖 AUMers – AUM University Future Engineers 2025
 <p align="center"> <img width="512" height="512" alt="AUMers Logo" src="https://github.com/user-attachments/assets/88de7538-2cd9-4d02-96d0-4ed30c3b0e1c" /> </p>
-📘 Table of Contents
 
 ## Table of Contents
 
