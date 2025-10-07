@@ -25,7 +25,7 @@
 - [📄 License](#license)
 
 
-## 🧩 Project Overview
+## Project Overview
 
 AUMers is an autonomous vehicle developed by AUM University (Kuwait) for the World Robot Olympiad – Future Engineers 2025 competition.
 The vehicle is designed to navigate a track autonomously, complete three laps under randomized wall conditions, detect colored traffic signs (red and green pillars), and finish with an automatic parking maneuver.
