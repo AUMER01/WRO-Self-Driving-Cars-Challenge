@@ -160,14 +160,17 @@ Tools Used in the Lab
 
 
 ## 🔩 Hardware and Components
-Component	Description	Purpose
-Xmotion Controlle:r	Integrated motor control + logic board	Core control and communication unit
-DC Motors:	Provide motion and steering control
-Servo Motor:	Steering actuator	Front wheel steering
-Ultrasonic Sensors (HC-SR04)	3 units (front, left, right):	Distance measurement and wall alignment
-PixyCam	Virsion 2.1:	Detects traffic signs and parking cues
-7.4V Li-Po Battery:	Power supply	Provides energy to the system
-3D Printed Chassis and Mounts:	Custom design	Mechanical support and sensor positioning
+
+| Component                | Description                         | Purpose                                      |
+|--------------------------|-------------------------------------|---------------------------------------------|
+| Xmotion Controller       | Integrated motor control + logic board | Core control and communication unit        |
+| DC Motor                | Provide motion and steering control | Drive system for movement and steering      |
+| Servo Motor              | Steering actuator                   | Front wheel steering                         |
+| Ultrasonic Sensors (HC-SR04) | 3 units (front, left, right)     | Distance measurement and wall alignment     |
+| PixyCam Version 2.1      | Vision sensor                        | Detects traffic signs and parking cues      |
+| 7.4V Li-Po Battery       | Power supply                         | Provides energy to the system               |
+| 3D Printed Chassis and Mounts | Custom design                     | Mechanical support and sensor positioning   |
+
 
 
 ## 💻 Software Description
