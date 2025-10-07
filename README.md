@@ -1,11 +1,3 @@
-Engineering materials
-====
-
-This repository contains engineering materials of **AUMers** self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2025.
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/f051f0e4-e086-4fe0-86a9-88b353c8dc6b" />
-
-
-
 ## Content
 
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
@@ -16,48 +8,42 @@ This repository contains engineering materials of **AUMers** self-driven vehicle
 * `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
 * `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
 
-## Introduction
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/88de7538-2cd9-4d02-96d0-4ed30c3b0e1c" />
 
-_This part includes the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
-Python code explanation for a self-driving car prototype using a Raspberry Pi:
-1. Hardware Setup
-•	Motor Control (MD13S Driver)
-o	DIR (Pin 23): Sets motor direction (forward/reverse).
-o	PWM (Pin 18): Controls motor speed via PWM (1 kHz frequency).
-•	Servo Motor (Steering)
-o	SERVO_PIN (Pin 17): Adjusts steering angle using 50 Hz PWM.
-o	Limits: min_right_servo=3.0 (max left), max_right_servo=10.0 (max right).
-•	Ultrasonic Sensors (3x)
-o	Pins for left, front, and right sensors (TRIG/ECHO GPIOs).
-o	Avoid GPIO conflicts by using non-overlapping pins (e.g., front sensor uses 20/21).
 
-2. Core Functions
-•	Motor Control
-o	set_motor_forward(speed_percent): Drives motor forward at a given speed (e.g., motor_speed=40%).
-o	stop_motor(): Stops the motor by setting PWM duty cycle to 0.
-•	Servo Control
-o	set_servo_angle(duty): Adjusts steering angle by changing PWM duty cycle (3.0–10.0 ≈ 0°–180°).
-•	Distance Measurement
-o	measure_distance(trig_pin, echo_pin): Uses ultrasonic sensors to calculate distance (cm) via echo pulse timing.
-	Timeout: Returns None if no echo is detected within 50 ms.
-•	Proportional Steering Logic
-o	calculate_servo_duty(): Adjusts servo angle based on the error (difference between left/right sensor distances).
-	KP Gain: 1.5 / max_error_cm ensures smooth corrections (clamped to servo limits).
+Discussion, Information, and Motivation for the Vehicle’s Mobility, Power, Sensing, and Obstacle Management
+====
 
-3. Main Workflow
-1.	Initialization
-o	Motor starts at motor_speed=40% and servo centers at 7.5 duty cycle.
-o	A timer (timer=23.478s) is set to stop the car after a fixed duration.
-2.	Sensor Loop
-o	Measures distances from left and right ultrasonic sensors.
-o	Handles timeouts by defaulting to 100 cm if no echo is detected.
-o	Calculates error (dist_left - dist_right):
-	Positive error: Too close to the right → steer left.
-	Negative error: Too close to the left → steer right.
-3.	Steering Adjustment
-o	Converts error into a servo duty cycle using proportional control (KP).
-o	Prints real-time data (distances, error, servo duty) for debugging.
-4.	Shutdown
-o	Stops after the timer expires or on KeyboardInterrupt (Ctrl+C).
-o	Cleans up GPIO pins to prevent damage.
+Our autonomous vehicle, AUMers, is engineered to perform fully autonomous driving while completing three laps on a track with randomly placed walls and traffic signs. The project combines mechanical design, embedded control, and computer vision to achieve precise navigation, adaptive decision-making, and robust obstacle management.
+________________________________________
+1. Mobility System
+Our autonomous vehicle, AUMers, is designed to demonstrate precise navigation, intelligent sensing, and adaptive obstacle management under dynamic conditions. The primary goal of the project is to develop a robust system capable of completing three laps on a closed track featuring randomized wall and traffic sign placements, while maintaining reliable control and safety throughout the run. 
+The robot’s chassis is designed for optimal balance and traction, ensuring smooth operation during turns and speed changes. One DC motor provide the car to drive forward or backward, while a front servo motor is used for steering control. The combination of DC motor (Driving forward/backward) and servo steering enables the robot to maintain smooth motion while following curves and making fine adjustments based on sensor data.
+________________________________________
+2. Power System
+The entire system is powered by a 7.4V Li-Po battery, providing a stable power supply for both the control electronics and motors. The Xmotion board manages power distribution efficiently, ensuring stable operation even during rapid acceleration or steering corrections.
+This setup minimizes electrical noise and voltage drop, ensuring consistent performance throughout the three laps and the final parking sequence.
+________________________________________
+3. Sensing System
+To achieve reliable detection of the surrounding objects and track walls, the robot integrates multiple sensing components:
+•	Ultrasonic Sensors (HC-SR04):
+Three ultrasonic sensors are mounted strategically — one facing forward, one angled to the right, and one angled to the left. These sensors continuously measure the distance to the surrounding walls or obstacles.
+The robot uses this data to maintain its centered position within the track, dynamically adjusting its steering based on the distance difference between the left and right sensors. This ensures stable navigation even when the wall positions are randomized.
+•	PixyCam (Vision Sensor):
+In the Obstacle Challenge, a PixyCam is used for traffic sign recognition. The camera is pre-trained to detect two specific color markers:
+1-	Red pillar → indicates the robot must keep to the right side of the lane.
+2-	Green pillar → indicates the robot must keep to the left side of the lane.
+The PixyCam sends real-time color detection data to the Xmotion controller, which processes the information and adjusts the driving path accordingly. The robot is programmed to avoid touching or displacing any traffic signs during operation.
+________________________________________
+4. Obstacle Management and Intelligent Behavior
+The robot combines data from ultrasonic sensors and the PixyCam to build an adaptive understanding of its environment.
+•	The ultrasonic sensors prevent collisions with the side walls and allow precise lane centering.
+•	The PixyCam provides high-level scene interpretation, enabling behavior-based decision-making when encountering colored traffic indicators.
+After completing the three laps, AUMers executes its final autonomous task: locating and entering the parking zone. Using visual data and distance measurements, the robot identifies the parking area and performs a parallel parking maneuver precisely within the designated space.
+________________________________________
+5. Motivation and Engineering Principles
+The AUMers project was developed to simulate real-world autonomous driving scenarios within the World Robot Olympiad framework. The system design reflects principles used in modern robotics — sensor fusion, embedded control, and real-time decision-making.
+Our motivation is to demonstrate how a compact, educational platform can replicate key aspects of autonomous vehicle behavior — perception, reasoning, and control — while maintaining simplicity, robustness, and modularity. The integration of the Xmotion controller, ultrasonic sensors, and vision-based navigation represents a complete engineering solution that balances performance and reliability.
+This project embodies our commitment to engineering excellence, teamwork, and the spirit of innovation that defines the Future Engineers category at WRO.
+
 
