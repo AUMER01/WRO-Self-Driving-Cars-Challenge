@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [🧩 Project Overview](#project-overview)
+- [🧩 Project Overview](#-project-overview)
 - [Repository Structure](#repository-structure)
   - [📁 docs/](#docs)
   - [⚙️ code/](#code)
