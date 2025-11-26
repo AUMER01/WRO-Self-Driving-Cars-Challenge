@@ -143,10 +143,9 @@ Images of the robot (all sides)
   <tr>
     <td><img width="220" src="https://github.com/user-attachments/assets/581d9ba8-7fb7-40f2-ab8f-64d2de9f3165" /></td>
     <td><img width="220" src="https://github.com/user-attachments/assets/2a9d8bb3-ee46-4803-8cc3-46ba6ddcda77" /></td>
-    <td><img wi
-
-
-</div>
+    <td><img width="220" src="https://github.com/user-attachments/assets/afcc0fe8-2d0e-4aef-aea4-6d611f3f30ef" /></td>
+  </tr>
+</table>
 
 Robot's components
 <p align="center"><img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/b178bf55-6c87-4521-a2f3-9c944bf2b491" />
