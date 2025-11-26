@@ -50,7 +50,7 @@ Contains all reference documents and diagrams related to system design, sensor p
 
 ## ⚙️ code/
 
-The full code for both open challenge and obstacle challenge are provided inside code fileson the top of this page. 
+The full code for both open challenge and obstacle challenge are provided inside code file on the top of this page. 
 
 
 ## 🧱 models/
@@ -63,6 +63,7 @@ The full code for both open challenge and obstacle challenge are provided inside
 
 This is a YouTube link showing a demo for our autonomous driving test.
 https://www.youtube.com/shorts/YcODsZENiaM
+The full viseos for both open challenge and obstacle challenge are provided inside videos file on the top of this page
 
 ## 📸 photos/
 
