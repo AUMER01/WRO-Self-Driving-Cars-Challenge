@@ -50,72 +50,7 @@ Contains all reference documents and diagrams related to system design, sensor p
 
 ## ⚙️ code/
 
-Includes code fucntions used to control and operate the robot:
-
-main_controller/ – core driving and logic code
-```cpp
-void loop() {
-  float leftDist = getDistance(TRIG_LEFT, ECHO_LEFT);   
-  float rightDist = getDistance(TRIG_RIGHT, ECHO_RIGHT);
-  if (leftDist < 0) leftDist = rightDist;               
-  if (rightDist < 0) rightDist = leftDist;
-  float error = leftDist - rightDist;                 
-  float derivative = error - lastError;               
-  float pdOutput = KP * error + KD * derivative;      
-  int servoAngle = constrain(CENTER_ANGLE + pdOutput, 
-                             MIN_SERVO_ANGLE,
-                             MAX_SERVO_ANGLE);
-  steeringServo.write(servoAngle);                    
-  lastError = error;                                  
-  runMotor(MOTOR_SPEED, false);
-  if (DEBUG_OUTPUT) {
-    Serial.print("L:"); Serial.print(leftDist);
-    Serial.print(" R:"); Serial.print(rightDist);
-    Serial.print(" | Servo: "); Serial.println(servoAngle);
-  }
-
-  delay(50);
-}
-```
-vision/ – image processing and traffic sign recognition
-```cpp
-int blocks = pixy.ccc.getBlocks();     
-  pixyActive = false;                   
-  int sig3TotalX = 0, sig3Count = 0;
-  for (int i = 0; i < blocks; i++) {
-    if (pixy.ccc.blocks[i].m_signature == 3) {   
-    
-      sig3Count++;
-    }
-  }
-
-  if (sig3Count > 0) {                    
-    if (avgX < 120) steeringServo.write(RED_HARD_LEFT);
-    else if (avgX > 200) steeringServo.write(GREEN_HARD_RIGHT);
-    else steeringServo.write(CENTER_ANGLE);
-
-    runMotor(SLOW_SPEED, false);          
-    if (DEBUG_OUTPUT) Serial.println("PARKING MODE ACTIVE");
-    return;                           
-  }
-
-  if (!parkingMode && blocks > 0) {
-    int sig = pixy.ccc.blocks[0].m_signature;  
-    int x   = pixy.ccc.blocks[0].m_x;         
-    if (sig == 1) {   // Red object detected
-      pixyActive = true;
-      if (x >= 200) steeringServo.write(RED_SOFT_LEFT);
-      else if (x >= 120) steeringServo.write(RED_MED_LEFT);
-      else steeringServo.write(RED_HARD_LEFT);
-    }
-    else if (sig == 2) {   
-      pixyActive = true;
-      if (x <= 120) steeringServo.write(GREEN_SOFT_RIGHT);
-      else if (x <= 200) steeringServo.write(GREEN_MED_RIGHT);
-      else steeringServo.write(GREEN_HARD_RIGHT);
-    }
-  }
-```
+The full code for both open challenge and obstacle challenge are provided inside code fileson the top of this page. 
 
 
 ## 🧱 models/
