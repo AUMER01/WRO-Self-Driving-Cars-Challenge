@@ -136,8 +136,7 @@ Images of the robot (all sides)
 
 <table>
   <tr>
-    <td><img width="200" src="https://github.com/user-attachments/assets/bcfedd58-0cac-417d-aeb3-2eb8b212f7ef)
-" /></td>
+    <td><img width="200" src="https://github.com/user-attachments/assets/bcfedd58-0cac-417d-aeb3-2eb8b212f7ef)" /></td>
     <td><img width="200" src="https://github.com/user-attachments/assets/9de4440c-2568-4540-a5c2-69495093c9ee" /></td>
     <td><img width="200" src="https://github.com/user-attachments/assets/cf5b756a-f996-47a3-838f-0b76ed1a9f25" /></td>
   </tr>
