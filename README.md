@@ -137,15 +137,14 @@ Images of the robot (all sides)
 <table>
   <tr>
     <td><img width="220" src="https://github.com/user-attachments/assets/bcfedd58-0cac-417d-aeb3-2eb8b212f7ef" /></td>
-    <td><img width="220" src="https://github.com/user-attachments/assets/9de4440c-2568-4540-a5c2-69495093c9ee" /></td>
-    <td><img width="220" src="https://github.com/user-attachments/assets/cf5b756a-f996-47a3-838f-0b76ed1a9f25" /></td>
+    <td><img width="220" src="https://github.com/user-attachments/assets/a8079dca-615e-4b55-9f72-6bb9f630937b" /></td>
+    <td><img width="220" src="https://github.com/user-attachments/assets/e3ce21d4-4cd9-439d-9274-82af3605b75f" /></td>
   </tr>
   <tr>
-    <td><img width="220" src="https://github.com/user-attachments/assets/a3a793fc-9b64-4f06-9266-ef11fa7deebe" /></td>
-    <td><img width="220" src="https://github.com/user-attachments/assets/3c058c81-6d25-4169-a338-65a1c3444224" /></td>
-    <td><img width="220" src="https://github.com/user-attachments/assets/55c5cd97-d009-4695-becd-e91ec7da2367" /></td>
-  </tr>
-</table>
+    <td><img width="220" src="https://github.com/user-attachments/assets/581d9ba8-7fb7-40f2-ab8f-64d2de9f3165" /></td>
+    <td><img width="220" src="https://github.com/user-attachments/assets/2a9d8bb3-ee46-4803-8cc3-46ba6ddcda77" /></td>
+    <td><img wi
+
 
 </div>
 
