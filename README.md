@@ -121,7 +121,7 @@ int blocks = pixy.ccc.getBlocks();
 ## 🧱 models/
 
 3D printed design used for the robot’s mechanical structure.
-<p align="center"> <img width="512" height="512" alt="image" src="![3D_Design](https://github.com/user-attachments/assets/41ec272d-5294-4c83-8e19-9ecab00ad179)
+<p align="center"> <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/41ec272d-5294-4c83-8e19-9ecab00ad179" />
 " />
 <p align="center"> <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/d83b65ee-1889-44d3-88d0-1d860c7195da" />
 
